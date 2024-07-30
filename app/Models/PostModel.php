@@ -12,7 +12,7 @@ class PostModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['title', 'content', 'status', 'slug', 'created_at', 'updated_at']; // Tambahkan nama kolom yang diizinkan
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
