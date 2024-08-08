@@ -17,7 +17,7 @@ class RegisterController extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Login Dan Register'
+            'title' => 'Register'
         ];
 
         return view('auth/register', $data);
@@ -35,9 +35,7 @@ class RegisterController extends BaseController
             'password' => $password
         ];
 
-        $save = $this->model->save($user);
-
-        if ($save) {
+        if ($this->model->save($user)) {
             session()->setFlashdata('success', 'Register Berhasil!');
             return redirect()->to(base_url('login'));
         } else {

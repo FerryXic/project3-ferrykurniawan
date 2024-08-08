@@ -17,15 +17,12 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('admin/post') ?>">Blog</a>
+                        <a class="nav-link" href="<?= base_url('admin/post') ?>"></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="<?= base_url('admin/post/new') ?>" class="btn btn-primary me-3">New Post</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?= base_url('admin/setting') ?>" class="btn btn-primary me-3">Setting</a>
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url('logout') ?>" class="btn btn-primary me-3 ">Logout</a>

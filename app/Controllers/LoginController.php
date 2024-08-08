@@ -16,8 +16,11 @@ class LoginController extends BaseController
 
     public function index()
     {
+        // Muat helper form
+        helper('form');
+        
         if ($this->isLoggedIn()) {
-            return redirect()->to(base_url('dashboard'));
+            return redirect()->to(base_url('login'));
         }
 
         $data = [
@@ -34,17 +37,16 @@ class LoginController extends BaseController
 
         $credentials = ['email' => $email];
 
-        $user = $this->model->where($credentials)
-            ->first();
+        $user = $this->model->where($credentials)->first();
 
-        if (! $user) {
+        if (!$user) {
             session()->setFlashdata('error', 'Email atau password anda salah.');
             return redirect()->back();
         }
 
         $passwordCheck = password_verify($password, $user['password']);
 
-        if (! $passwordCheck) {
+        if (!$passwordCheck) {
             session()->setFlashdata('error', 'Email atau password anda salah.');
             return redirect()->back();
         }
@@ -56,15 +58,11 @@ class LoginController extends BaseController
         ];
 
         session()->set($userData);
-        return redirect()->to(base_url('dashboard'));
+        return redirect()->to(base_url('admin/post'));
     }
 
     private function isLoggedIn(): bool
     {
-        if (session()->get('logged_in')) {
-            return true;
-        }
-
-        return false;
+        return session()->get('logged_in') === TRUE;
     }
 }
