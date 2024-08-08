@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyBlog</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>" />
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -63,7 +63,7 @@
         </footer>
     </div>
     <!-- Jquery dan Bootstrap JS -->
-    <script src="<?= base_url('js/jquery.min.js') ?>"></script>
-    <script src="<?= base_url('js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
 </body>
 </html>

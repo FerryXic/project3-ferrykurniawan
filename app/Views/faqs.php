@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>" />
     <title>MyBlog</title>
 </head>
 <body>
@@ -63,7 +63,7 @@
 </div>
 
 <!-- Jquery dan Bootstrap JS -->
-<script src="<?= base_url('js/jquery.min.js') ?>"></script>
-<script src="<?= base_url('js/bootstrap.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
+<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
 </body>
 </html>
